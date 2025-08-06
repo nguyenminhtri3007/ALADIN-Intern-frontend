@@ -15,8 +15,13 @@ const ProductList = () => {
   });
 
   const filterProduct = products.filter((product) => {
-    return product.price > 30;
+    return Number(product.price) > 30;
   });
+
+  const totalPrice = products.reduce((acc, product) => {
+    return acc + Number(product.price);
+  }, 0);
+
   return (
     <div>
       <h3>Danh sách mới</h3>
@@ -38,6 +43,8 @@ const ProductList = () => {
           </li>
         );
       })}
+      <hr />
+      <h3>Tổng tiền phải thanh toán {totalPrice}VNĐ</h3>
     </div>
   );
 };
