@@ -2,15 +2,16 @@ import React from "react";
 
 const ProductList = () => {
   const products = [
-    { id: 1, name: "banana", price: "42" },
-    { id: 2, name: "orange", price: "24" },
-    { id: 3, name: "apple", price: "28" },
-    { id: 4, name: "xoài", price: "33" },
+    { id: 1, name: "banana", price: 42 },
+    { id: 2, name: "orange", price: 24 },
+    { id: 3, name: "apple", price: 28 },
+    { id: 4, name: "xoài", price: 33 },
   ];
 
   const uperProduct = products.map((product) => {
     return {
       name: product.name.toUpperCase(),
+      price: product.price,
     };
   });
 
