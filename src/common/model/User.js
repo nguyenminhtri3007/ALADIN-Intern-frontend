@@ -12,12 +12,12 @@ export class User {
   }
 
   returnBook(bookId) {
-    const bookToReturn = this.borrowedBooks.find((book) => book.id === bookId);
-    if (bookToReturn) {
-      bookToReturn.returnBook();
-      this.borrowedBooks = this.borrowedBooks.filter(
-        (book) => book.id !== bookId
-      );
-    }
+    this.borrowedBooks = this.borrowedBooks.filter((book) => {
+      if (book.id === bookId) {
+        this.returnBook();
+        return false;
+      }
+      return true;
+    });
   }
 }

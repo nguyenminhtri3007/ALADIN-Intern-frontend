@@ -33,7 +33,7 @@ const LibraryScreen = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginLeft: "30px" }}>
       <h2> Thư viện</h2>
       <AddBookForm onAdd={handleAddBook} />
       <BookList books={books} onBorrow={handleBorrow} />
