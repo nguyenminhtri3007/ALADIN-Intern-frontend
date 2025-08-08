@@ -7,10 +7,11 @@ import LibraryScreen from "./screens/LibraryScreen";
 import TodoListScreen from "./screens/TodoList.Screen";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import LoginScreen from "./screens/Login/Login.screnns";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element="Trang chủ" />
@@ -18,7 +19,9 @@ root.render(
         <Route path="todos" element={<TodoListScreen />} />
         <Route path="products" element={<ProductList />} />
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
+
+    <LoginScreen />
   </React.StrictMode>
 );
 
